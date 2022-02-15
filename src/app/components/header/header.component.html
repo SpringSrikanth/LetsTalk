@@ -37,19 +37,19 @@
       <a class="nav-link" routerLink="">Home</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link">About Us</a>
-    </li>
-    <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link">About Us</a>
+      <a class="nav-link" routerLink="/blogs">Blogs</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link">Contact Us</a>
+      <a class="nav-link" routerLink="/Contact-Us">Contact Us</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link">Contact Us</a>
+      <a class="nav-link" routerLink="/Contact-Us">Contact Us</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/profile">Profile</a>
+      <a class="nav-link" routerLink="/About-us">About Us</a>
+    </li>
+    <li class="nav-list-item" *ngIf="!isUserLoggedIn">
+      <a class="nav-link" routerLink="/About-us">About Us</a>
     </li>
     <li class="nav-list-item dropdown" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
