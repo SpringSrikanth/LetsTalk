@@ -1,0 +1,47 @@
+<div style="margin: 10px;">
+    <div>
+        <div>
+            <h4>Welcome to the club</h4>
+        </div>
+        <div class="signinformbox">
+            <div>
+                <h3 style="text-align: center;">User Signin</h3>
+                <div style="margin-top: 40px;margin-bottom: 40px;">
+                    <form class="form" [formGroup]="signInForm" (ngSubmit)="onSubmitSignInForm()">
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="email">Email: </label>
+                                <input type="text" id="email" formControlName="email" placeholder="Enter email.." class="form-control">
+                                <div *ngIf="getEmail().invalid && getEmail().touched">
+                                    <div *ngIf="getEmail()?.errors?.required">
+                                        <span class="text-danger">Email required</span>
+                                    </div>
+                                    <div *ngIf="getEmail()?.errors?.email">
+                                        <span class="text-danger">Enter valid email</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" formControlName="password" placeholder="Enter password.." class="form-control">
+                                <div *ngIf="getPassword().touched && getPassword().invalid">
+                                    <div *ngIf="getPassword()?.errors?.required">
+                                        <span class="text-danger">Password required</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info" style="width: 150px;border-radius: 10px;font-weight: 400;margin: 14px;" [disabled]="!this.signInForm.valid">Signin</button>
+                        <button type="reset" class="btn btn-warning" style="width: 150px;border-radius: 10px;font-weight: 400;margin: 14px;">Reset</button>
+                    </form>
+                </div>
+                <div style="text-align: center;margin-bottom: 10px;">
+                    Don't have an Account? <a routerLink="/signup">Signup</a>
+                </div>
+                <button type="button" class="btn btn-light google"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="currentColor" class="bi bi-google" viewBox="0 0 16 18">
+                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                  </svg> Signin with Google</button>
+            </div>
+        </div>
+    </div>
+</div>
