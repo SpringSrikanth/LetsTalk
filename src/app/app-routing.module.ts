@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -29,8 +31,25 @@ const routes: Routes = [
     component:ProfileComponent
   },
   {
+    path:'blogs',
+    canActivate:[AuthguardGuard],
+    component:BlogsComponent
+  },
+  {
+    path:'Contact-Us',
+    canActivate:[AuthguardGuard],
+    loadChildren:()=>
+      import('./components/contactus/contactus.module').then(m=>{
+        return m.ContactusModule
+    })
+  },
+  {
     path:'signin',
     component:SigninComponent
+  },
+  {
+    path:'About-us',
+    component:AboutusComponent
   },
   {
     path:'signup',
