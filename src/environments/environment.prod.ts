@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  nodeUri:'http://nodejscrudbysrikanth.herokuapp.com'
+  nodeUri:'https://nodejscrudbysrikanth.herokuapp.com'
 };

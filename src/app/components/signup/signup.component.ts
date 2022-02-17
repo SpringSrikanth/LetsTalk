@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.onInitSignUpForm();
   }
+
   onInitSignUpForm(){
     this.signUpForm=this.formBuilder.group({
       firstName:[''],
@@ -30,8 +31,9 @@ export class SignupComponent implements OnInit {
       hobbies:['']
     })
   }
+
   onSubmitSignInForm(){
     console.log(this.signUpForm.value);
-    this.service.signUp(this.signUpForm.value.firstName,this.signUpForm.value.middleName,this.signUpForm.value.secondName,this.signUpForm.value.gender,this.signUpForm.value.dob,this.signUpForm.value.mobile,this.signUpForm.value.email,this.signUpForm.value.userName,this.signUpForm.value.password,this.signUpForm.value.bio,this.signUpForm.value.hobbies);
+    this.service.signUp(this.signUpForm.value.firstName,this.signUpForm.value.middleName,this.signUpForm.value.secondName,this.signUpForm.value.gender,this.signUpForm.value.dob,this.signUpForm.value.mobile,this.signUpForm.value.email,this.signUpForm.value.userName,this.signUpForm.value.password,this.signUpForm.value.bio,this.signUpForm.value.hobbies,[]);
   }
 }
