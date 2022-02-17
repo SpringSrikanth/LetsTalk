@@ -1,0 +1,57 @@
+
+.signUpFormStyle{
+    border: 1px #F4F6FC solid;
+    background-color: #F4F6FC;
+    border-radius: 10px;
+    margin: 10px 300px 10px 300px;
+    height: 445px;
+    padding: 25px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-family: "Akaya Telivigala", cursive;
+    font-size: 48px;
+    line-height: 64px;
+}
+p{
+    text-align: center;
+}
+
+input{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #F4F6FC;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    height: 50px;
+}
+textarea{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #F4F6FC;
+    margin-top: 8px;
+    height: 100px;
+}
+.submitButton{
+    background-color: #1c1e53;
+    border-radius: 20px;
+    margin: 15px;
+    height: 40px;
+    width: 175px;
+    color: white;
+    border-color: #1c1e53;
+    font-size: 13.5px;
+}
+.resetButton{
+    background-color: #F4F6FC;
+    border-radius: 20px;
+    margin: 15px;
+    height: 40px;
+    width: 175px;
+    color: #1c1e53;
+    font-size: 13.5px;
+    font-weight: bold;
+}

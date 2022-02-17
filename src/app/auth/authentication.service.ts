@@ -26,8 +26,8 @@ export class AuthenticationService {
       localStorage.clear();
     })
   }
-  public signUp(firstName:string,middleName:string,secondName:string,gender:any,dob:any,mobile:number,email:string,userName:string,password:string,bio:any,hobbies:string){
-    this.http.post(`${environment.nodeUri}/signup`,{firstName,middleName,secondName,gender,dob,mobile,email,userName,password,bio,hobbies},{headers:this.headers}).subscribe((res:any)=>{
+  public signUp(firstName:string,middleName:string,secondName:string,gender:any,dob:any,mobile:number,email:string,userName:string,password:string,bio:any,hobbies:string,roles:any[]){
+    this.http.post(`${environment.nodeUri}/signup`,{firstName,middleName,secondName,gender,dob,mobile,email,userName,password,bio,hobbies,roles},{headers:this.headers}).subscribe((res:any)=>{
      this.router.navigate(['/signin']);
    },(error)=>{
      console.log('Error occuring while calling signup()',error.message);
