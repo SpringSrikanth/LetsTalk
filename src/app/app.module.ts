@@ -15,6 +15,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { HttpinterceptorInterceptor } from './interceptors/httpinterceptor.interceptor';
 import { AuthenticationService } from './auth/authentication.service';
+import { ForbiddenComponent } from './components/forbidden/forbidden.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AuthenticationService } from './auth/authentication.service';
     SignupComponent,
     ProductsComponent,
     AboutusComponent,
-    BlogsComponent
+    BlogsComponent,
+    ForbiddenComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
