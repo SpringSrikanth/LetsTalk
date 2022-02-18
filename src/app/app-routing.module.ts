@@ -36,7 +36,7 @@ const routes: Routes = [
     component:BlogsComponent
   },
   {
-    path:'Contact-Us',
+    path:'contact-us',
     canActivate:[AuthguardGuard],
     loadChildren:()=>
       import('./components/contactus/contactus.module').then(m=>{
@@ -48,7 +48,7 @@ const routes: Routes = [
     component:SigninComponent
   },
   {
-    path:'About-us',
+    path:'about-us',
     component:AboutusComponent
   },
   {
