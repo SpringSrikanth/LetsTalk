@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { AuthguardGuard } from './guard/authguard.guard';
+import { UsersComponent } from './components/users/users.component';
+import { AdminGuard } from './guard/admin/admin.guard';
+import { AuthguardGuard } from './guard/auth/authguard.guard';
 
 const routes: Routes = [
   {
@@ -36,7 +39,7 @@ const routes: Routes = [
     component:BlogsComponent
   },
   {
-    path:'Contact-Us',
+    path:'contact-us',
     canActivate:[AuthguardGuard],
     loadChildren:()=>
       import('./components/contactus/contactus.module').then(m=>{
@@ -48,12 +51,21 @@ const routes: Routes = [
     component:SigninComponent
   },
   {
-    path:'About-us',
+    path:'about-us',
     component:AboutusComponent
   },
   {
     path:'signup',
     component:SignupComponent
+  },
+  {
+    path:'forbidden',
+    component:ForbiddenComponent
+  },
+  {
+    path:'users',
+    canActivate:[AuthguardGuard,AdminGuard],
+    component:UsersComponent
   },
   {
     path:'**',

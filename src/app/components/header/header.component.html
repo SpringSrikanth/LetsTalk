@@ -37,19 +37,22 @@
       <a class="nav-link" routerLink="">Home</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/blogs">Blogs</a>
+      <a class="nav-link" routerLink="/blogs">My Blogs</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/Contact-Us">Contact Us</a>
-    </li>
-    <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/Contact-Us">Contact Us</a>
+      <a class="nav-link" routerLink="/users">Users</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/About-us">About Us</a>
+      <a class="nav-link" routerLink="/contact-us">Contact us</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/About-us">About Us</a>
+      <a class="nav-link" routerLink="/contact-us">Contact us</a>
+    </li>
+    <li class="nav-list-item" *ngIf="isUserLoggedIn">
+      <a class="nav-link" routerLink="/about-us">About us</a>
+    </li>
+    <li class="nav-list-item" *ngIf="!isUserLoggedIn">
+      <a class="nav-link" routerLink="/about-us">About us</a>
     </li>
     <li class="nav-list-item dropdown" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
