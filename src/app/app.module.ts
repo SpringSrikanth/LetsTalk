@@ -17,6 +17,7 @@ import { HttpinterceptorInterceptor } from './interceptors/httpinterceptor.inter
 import { AuthenticationService } from './auth/authentication.service';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { UsersComponent } from './components/users/users.component';
+import { ImageSlideShowComponent } from './components/image-slide-show/image-slide-show.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UsersComponent } from './components/users/users.component';
     AboutusComponent,
     BlogsComponent,
     ForbiddenComponent,
-    UsersComponent
+    UsersComponent,
+    ImageSlideShowComponent
   ],
   imports: [
     BrowserModule,

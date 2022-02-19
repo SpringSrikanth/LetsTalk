@@ -26,6 +26,7 @@
     "@angular/router": "~9.0.0",
     "bootstrap": "4.6.1",
     "express": "^4.17.2",
+    "jquery": "^3.6.0",
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

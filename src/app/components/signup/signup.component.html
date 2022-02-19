@@ -1,20 +1,7 @@
 <div class="container-fluid row" style="margin-top: 10px;">
     <div class="col-md-6">
         <h4>Signup to join the club</h4>
-        <div class="card">
-            <div class="card_part card_part-one">
-                <img src="../assets/meeting5.jpg" alt="" height="100%" width="100%">
-            </div>
-            <div class="card_part card_part-two">
-                <img src="../assets/meeting2.jpg" alt="" height="100%" width="100%">
-            </div>
-            <div class="card_part card_part-three">
-                <img src="../assets/meeting1.jpg" alt="" height="100%" width="100%">
-            </div>
-            <div class="card_part card_part-four">
-                <img src="../assets/meeting6.jpg" alt="" height="100%" width="100%">
-            </div>
-        </div>
+        <app-image-slide-show></app-image-slide-show>
     </div>
     <div class="col-md-6 signinformbox">
         <form class="form" style="padding:20px;" [formGroup]="signUpForm" (ngSubmit)="onSubmitSignInForm()">
