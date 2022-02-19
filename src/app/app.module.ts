@@ -18,6 +18,7 @@ import { AuthenticationService } from './auth/authentication.service';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { UsersComponent } from './components/users/users.component';
 import { ImageSlideShowComponent } from './components/image-slide-show/image-slide-show.component';
+import { AdminDirectiveDirective } from './directives/admin-directive.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ImageSlideShowComponent } from './components/image-slide-show/image-sli
     BlogsComponent,
     ForbiddenComponent,
     UsersComponent,
-    ImageSlideShowComponent
+    ImageSlideShowComponent,
+    AdminDirectiveDirective
   ],
   imports: [
     BrowserModule,

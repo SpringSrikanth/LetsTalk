@@ -39,9 +39,11 @@
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
       <a class="nav-link" routerLink="/blogs">My Blogs</a>
     </li>
-    <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/users">Users</a>
-    </li>
+    <ng-container *ngIf="isUserLoggedIn">
+      <li class="nav-list-item" *appAdminDirective="isAdmin" >
+        <a class="nav-link" routerLink="/users">Users</a>
+      </li>
+    </ng-container>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
       <a class="nav-link" routerLink="/contact-us">Contact us</a>
     </li>
