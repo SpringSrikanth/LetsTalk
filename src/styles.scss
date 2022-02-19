@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 767px) {
+    .row {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+    }
+    [class*="col-md-"] {
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 468px) {
+    .row {
+        display: flex;
+        flex-direction: column !important;
+        margin: 0px !important;
+    }
+    [class*="col-md-"] {
+        width: 100%;
+        padding: 0px;
+    }
+    .card{
+        margin-left: 0px;
+        margin: 2px;
+    }
+  }
