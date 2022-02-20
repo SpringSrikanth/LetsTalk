@@ -14,11 +14,13 @@ import { AuthModule } from './auth/auth/auth.module';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { HttpinterceptorInterceptor } from './interceptors/httpinterceptor.interceptor';
+import { ErrorInterceptor } from './interceptors/error.interceptor';
 import { AuthenticationService } from './auth/authentication.service';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { UsersComponent } from './components/users/users.component';
 import { ImageSlideShowComponent } from './components/image-slide-show/image-slide-show.component';
 import { AdminDirectiveDirective } from './directives/admin-directive.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,12 +44,18 @@ import { AdminDirectiveDirective } from './directives/admin-directive.directive'
     FormsModule,
     ReactiveFormsModule,
     AuthModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [
     {
       provide:HTTP_INTERCEPTORS,
       useClass:HttpinterceptorInterceptor,
+      multi:true
+    },
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:ErrorInterceptor,
       multi:true
     },
     AuthenticationService
