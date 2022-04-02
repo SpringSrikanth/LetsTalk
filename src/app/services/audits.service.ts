@@ -15,5 +15,4 @@ export class AuditsService {
   getAuditsByPagination(pageIndex,pageSize){
     return this.http.get(`${environment.nodeUri}/audits/${pageIndex}/${pageSize}`)
   }
-
 }
