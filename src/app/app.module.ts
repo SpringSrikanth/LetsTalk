@@ -23,6 +23,7 @@ import { AdminDirectiveDirective } from './directives/admin-directive.directive'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { AuditsComponent } from './components/audits/audits.component'
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AuditsComponent } from './components/audits/audits.component'
     ReactiveFormsModule,
     AuthModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     {
