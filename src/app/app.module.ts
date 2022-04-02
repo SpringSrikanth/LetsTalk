@@ -21,6 +21,8 @@ import { UsersComponent } from './components/users/users.component';
 import { ImageSlideShowComponent } from './components/image-slide-show/image-slide-show.component';
 import { AdminDirectiveDirective } from './directives/admin-directive.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { AuditsComponent } from './components/audits/audits.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ForbiddenComponent,
     UsersComponent,
     ImageSlideShowComponent,
-    AdminDirectiveDirective
+    AdminDirectiveDirective,
+    AuditsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     AuthModule,
     BrowserAnimationsModule,
-    
+    MatTableModule
   ],
   providers: [
     {

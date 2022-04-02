@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { AuditsComponent } from './components/audits/audits.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
@@ -37,6 +38,11 @@ const routes: Routes = [
     path:'blogs',
     canActivate:[AuthguardGuard],
     component:BlogsComponent
+  },
+  {
+    path:'audits',
+    canActivate:[AuthguardGuard],
+    component:AuditsComponent
   },
   {
     path:'contact-us',
