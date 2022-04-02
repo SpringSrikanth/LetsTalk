@@ -25,7 +25,6 @@ export class AuditsComponent implements OnInit {
       // console.log(res);
       this.auditData=res;
     })
-
   }
   handlePage(event){
     // console.log(event);

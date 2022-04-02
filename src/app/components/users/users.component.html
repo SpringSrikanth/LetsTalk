@@ -55,3 +55,6 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 </div>
+<mat-paginator #paginator [pageSize]="pageSize" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true" [length]="usersData?.totalCount" (page)="handlePage($event)">
+
+</mat-paginator>

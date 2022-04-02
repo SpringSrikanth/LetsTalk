@@ -14,5 +14,10 @@ export class UsersService {
     return this.http.get(`${environment.nodeUri}/users`)
    }
 
+   getUsersByPagination(pageIndex,pageSize){
+    return this.http.get(`${environment.nodeUri}/users/${pageIndex}/${pageSize}`)
+
+   }
+
 }
 
