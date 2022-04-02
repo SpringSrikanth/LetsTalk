@@ -41,14 +41,25 @@
     </ng-container>
 
     <ng-container matColumnDef="statusCode">
-        <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element?.statusCode === "402" ? "Login Failed" : "Login Success"}}</mat-cell>
+        <mat-header-cell *matHeaderCellDef style="min-width:120px">Status</mat-header-cell>
+        <mat-cell *matCellDef="let element" style="min-width:120px">
+            <div *ngIf="element.statusCode === '402'">
+                  <div style="color:red">
+                    Login Failed
+                  </div>  
+            </div>
+            <div  *ngIf="element.statusCode === '200'">
+                <div style="color:green">
+                    Login Success
+                </div>
+            </div>
+        </mat-cell>
     </ng-container>
     
-        <ng-container matColumnDef="client_org">
-            <mat-header-cell *matHeaderCellDef>Client Host</mat-header-cell>
-            <mat-cell *matCellDef="let element">{{element?.clientIpDetails[0]?.org}}</mat-cell>
-        </ng-container>
+    <ng-container matColumnDef="client_org">
+        <mat-header-cell *matHeaderCellDef>Client Host</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element?.clientIpDetails[0]?.org}}</mat-cell>
+    </ng-container>
 
     <ng-container matColumnDef="server_org">
         <mat-header-cell *matHeaderCellDef>Server Host</mat-header-cell>
@@ -75,3 +86,7 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 </div>
+
+<mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true" [length]="auditData?.totalCount" (page)="handlePage($event)">
+
+</mat-paginator>
