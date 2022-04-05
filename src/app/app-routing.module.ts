@@ -9,6 +9,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
 import { UsersComponent } from './components/users/users.component';
 import { AdminGuard } from './guard/admin/admin.guard';
 import { AuthguardGuard } from './guard/auth/authguard.guard';
@@ -65,13 +66,13 @@ const routes: Routes = [
     component:SignupComponent
   },
   {
-    path:'forbidden',
-    component:ForbiddenComponent
-  },
-  {
     path:'users',
     canActivate:[AuthguardGuard,AdminGuard],
     component:UsersComponent
+  },
+  {
+    path:'forbidden',
+    component:ForbiddenComponent
   },
   {
     path:'**',
