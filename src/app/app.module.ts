@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { AuditsComponent } from './components/audits/audits.component'
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     UsersComponent,
     ImageSlideShowComponent,
     AdminDirectiveDirective,
-    AuditsComponent
+    AuditsComponent,
+    UserdetailsSideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AuthModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSidenavModule
   ],
   providers: [
     {

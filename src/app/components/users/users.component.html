@@ -52,9 +52,11 @@
          
         
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        <mat-row (click)="selectedRow(row)" [ngClass]="{'highlight': selectedRowIndex == row._id}" *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 </div>
 <mat-paginator #paginator [pageSize]="pageSize" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true" [length]="usersData?.totalCount" (page)="handlePage($event)">
 
 </mat-paginator>
+
+<app-userdetails-side-nav *ngIf="sideNavOpen" (closeEvent)="closeSidenav()"> </app-userdetails-side-nav>

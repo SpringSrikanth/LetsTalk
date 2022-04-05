@@ -1,0 +1,9 @@
+<mat-sidenav-container
+    class="example-container" style="width: 100%;"  >
+    <mat-sidenav style="width: 60%;" #sidenav  disableClose opened>
+    <mat-sidenav-content opened>
+        <p (click)="close()" style="border-radius: 50%;border: solid lightgray;margin: 5px;float: right; height: 25px;width: 25px;padding-left: 5px;">x</p>
+        <p>Closed due to: </p>
+    </mat-sidenav-content>
+  </mat-sidenav>
+</mat-sidenav-container>
