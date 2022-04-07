@@ -3,7 +3,7 @@
     <mat-sidenav style="width: 60%;" #sidenav  disableClose opened>
     <mat-sidenav-content opened>
         <p (click)="close()" style="border-radius: 50%;border: solid lightgray;margin: 5px;float: right; height: 25px;width: 25px;padding-left: 5px;">x</p>
-          <form action="" class="form pl-4" [formGroup]="form">
+          <form action="" class="form pl-4 mt-4" [formGroup]="form">
             <h3>User Details </h3>
             <div class="row mt-4">
               <label class="col-md-3" for="userId">User Id:</label>
@@ -35,7 +35,7 @@
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="gender">Gender:</label>
-              <input type="text" id="gender" formControlName="gender"class="col-md-6 form-control form-control-sm ">
+              <input type="gender" id="gender" formControlName="gender"class="col-md-6 form-control form-control-sm ">
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="createdAt">Created At:</label>
@@ -47,15 +47,16 @@
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="bio">Bio:</label>
-              <input type="text" id="bio" formControlName="bio"class="col-md-6 form-control form-control-sm ">
+              <textarea name="bio"cols="10" rows="5" type="text" id="bio" formControlName="bio"class="col-md-6 form-control form-control-sm "></textarea>
+              <!-- <input type="text" id="bio" formControlName="bio"class="col-md-6 form-control form-control-sm "> -->
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="activated">Activated:</label>
-              <input type="text" id="activated" formControlName="activated"class="col-md-6 form-control form-control-sm ">
+              <mat-slide-toggle id="activated" formControlName="activated"></mat-slide-toggle>
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="emailVerified">Email verified:</label>
-              <input type="text" id="emailVerified" formControlName="emailVerified"class="col-md-6 form-control form-control-sm ">
+              <mat-slide-toggle id="emailVerified" formControlName="emailVerified"></mat-slide-toggle>
             </div>
           </form>
     </mat-sidenav-content>
