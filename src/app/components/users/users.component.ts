@@ -25,6 +25,7 @@ export class UsersComponent implements OnInit {
   pageSizeOptions: number[] = [5, 10, 15, 20, 25, 50];
   sideNavOpen = false;
   selectedRowIndex=-1;
+  user;
 
   constructor(private service: UsersService) {}
 
@@ -48,7 +49,9 @@ export class UsersComponent implements OnInit {
   selectedRow(row) {
     // console.log(row)
     // console.log(row._id);
+    this.user=row;
     this.sideNavOpen = true;
     this.selectedRowIndex = row._id;
   }
+  
 }
