@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AuditsComponent } from './components/audits/audits.component'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/u
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule
   ],
   providers: [
     {
