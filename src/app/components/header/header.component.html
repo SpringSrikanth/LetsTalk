@@ -1,65 +1,38 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-info">
-    <div class="container-fluid">
-      <a class="navbar-brand">Let's Talk</a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav"  *ngIf="isUserLoggedIn">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/products']">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="logout()">Logout</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav"  *ngIf="!isUserLoggedIn">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/signin']">Signin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/signup']">Signup</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav> -->
-
 <nav class="main-navigation">
   <div class="navbar-header animated fadeInUp">
     <a class="navbar-brand" href="#">Let's Talk</a>
   </div>
   <ul class="nav-list">
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="">Home</a>
+      <a class="nav-link" routerLink="/home" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Home</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="">Home</a>
+      <a class="nav-link" routerLink="/home" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Home</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/blogs">My Blogs</a>
+      <a class="nav-link" routerLink="/blogs" [routerLinkActive]="['active']">My Blogs</a>
     </li>
     <ng-container *ngIf="isUserLoggedIn">
       <li class="nav-list-item" *appAdminDirective="isAdmin" >
-        <a class="nav-link" routerLink="/users">Users</a>
+        <a class="nav-link" routerLink="/users" [routerLinkActive]="['active']">Users</a>
       </li>
     </ng-container>
     <ng-container *ngIf="isUserLoggedIn">
       <li class="nav-list-item" *appAdminDirective="isAdmin" >
-        <a class="nav-link" routerLink="/audits">Audits</a>
+        <a class="nav-link" routerLink="/audits" [routerLinkActive]="['active']">Audits</a>
       </li>
     </ng-container>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/contact-us">Contact us</a>
+      <a class="nav-link" routerLink="/contact-us" [routerLinkActive]="['active']">Contact us</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/contact-us">Contact us</a>
+      <a class="nav-link" routerLink="/contact-us" [routerLinkActive]="['active']">Contact us</a>
     </li>
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
-      <a class="nav-link" routerLink="/about-us">About us</a>
+      <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">About us</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/about-us">About us</a>
+      <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">About us</a>
     </li>
     <li class="nav-list-item dropdown" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
@@ -82,10 +55,10 @@
       </div>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/signin">Signin</a>
+      <a class="nav-link" routerLink="/signin" [routerLinkActive]="['active']">Signin</a>
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
-      <a class="nav-link" routerLink="/signup">Signup</a>
+      <a class="nav-link" routerLink="/signup" [routerLinkActive]="['active']">Signup</a>
     </li>
   </ul>
 </nav>
