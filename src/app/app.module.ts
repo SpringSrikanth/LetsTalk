@@ -26,6 +26,8 @@ import { AuditsComponent } from './components/audits/audits.component'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/u
     ImageSlideShowComponent,
     AdminDirectiveDirective,
     AuditsComponent,
-    UserdetailsSideNavComponent
+    UserdetailsSideNavComponent,
+    BlogListComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
