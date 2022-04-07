@@ -59,4 +59,4 @@
 
 </mat-paginator>
 
-<app-userdetails-side-nav *ngIf="sideNavOpen" (closeEvent)="closeSidenav()"> </app-userdetails-side-nav>
+<app-userdetails-side-nav *ngIf="sideNavOpen" (closeEvent)="closeSidenav()" [userInfo]="user"> </app-userdetails-side-nav>

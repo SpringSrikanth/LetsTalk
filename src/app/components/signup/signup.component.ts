@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  onSubmitSignInForm(){
+  onSubmitSignUpForm(){
     console.log(this.signUpForm.value);
     this.service.signUp(this.signUpForm.value.firstName,this.signUpForm.value.middleName,this.signUpForm.value.secondName,this.signUpForm.value.gender,this.signUpForm.value.dob,this.signUpForm.value.mobile,this.signUpForm.value.email,this.signUpForm.value.userName,this.signUpForm.value.password,this.signUpForm.value.bio,this.signUpForm.value.hobbies,[]);
   }
