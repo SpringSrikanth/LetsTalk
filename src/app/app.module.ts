@@ -29,6 +29,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DatePipe } from '@angular/common';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { DatePipe } from '@angular/common';
     AdminDirectiveDirective,
     AuditsComponent,
     UserdetailsSideNavComponent,
-    ProfileComponent
+    ProfileComponent,
+    BlogListComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
