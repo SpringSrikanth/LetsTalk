@@ -27,6 +27,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/u
     ImageSlideShowComponent,
     AdminDirectiveDirective,
     AuditsComponent,
-    UserdetailsSideNavComponent
+    UserdetailsSideNavComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/u
     MatSlideToggleModule
   ],
   providers: [
+    DatePipe,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:HttpinterceptorInterceptor,
