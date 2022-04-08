@@ -35,6 +35,11 @@
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="gender">Gender:</label>
+              <mat-radio-group formControlName="gender">
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button class="ml-2" value="Female">Female</mat-radio-button>
+                <mat-radio-button class="ml-2" value="Others">Others</mat-radio-button>
+              </mat-radio-group>
               <input type="radio" id="gender" formControlName="gender"class="">
             </div>
             <div class="row mt-4">
