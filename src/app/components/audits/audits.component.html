@@ -83,10 +83,11 @@
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-row (click)="selectedRow(row)" [ngClass]="{'highlight': selectedRowIndex == row._id}" *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 </div>
 
 <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true" [length]="auditData?.totalCount" (page)="handlePage($event)">
 
 </mat-paginator>
+<app-auditdetails-sidenav *ngIf="isSideNavOpen" [auditInfo]="auditDetails" (closeEvent)="closeSideNav()"></app-auditdetails-sidenav>
