@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSidenav } from '@angular/material/sidenav';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ["./userdetails-side-nav.component.scss"],
 })
 export class UserdetailsSideNavComponent implements OnInit {
-  constructor(public fb: FormBuilder) {
+  constructor(public fb: FormBuilder,private datePipe:DatePipe) {
     this.formInit();
   }
 
@@ -72,12 +73,12 @@ export class UserdetailsSideNavComponent implements OnInit {
       mobile:value.mobile,
       dob:value.dob,
       gender:value.gender,
-      createdAt:value.createdAt,
-      updatedAt:value.updatedAt,
+      createdAt:this.datePipe.transform(value.createdAt,'medium'),
+      updatedAt:this.datePipe.transform(value.updatedAt,'medium'),
       bio: value.bio ?  value.bio : 'Not Added Anything',
       activated:value.activated,
       emailVerified:value.email_Verified
-    })
+    },{emitEvent:false})
 
     this.form.disable({emitEvent:false})
   }

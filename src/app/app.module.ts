@@ -27,6 +27,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { DatePipe } from '@angular/common';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
@@ -46,6 +48,7 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     AdminDirectiveDirective,
     AuditsComponent,
     UserdetailsSideNavComponent,
+    ProfileComponent,
     BlogListComponent,
     BlogDetailsComponent
   ],
@@ -63,6 +66,7 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     MatSlideToggleModule
   ],
   providers: [
+    DatePipe,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:HttpinterceptorInterceptor,
