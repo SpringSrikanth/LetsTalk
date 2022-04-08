@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
+import { MatRadioModule} from '@angular/material/radio'
 import { ProfileComponent } from './components/profile/profile.component';
 import { DatePipe } from '@angular/common';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
@@ -63,7 +64,8 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     MatTableModule,
     MatPaginatorModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatRadioModule
   ],
   providers: [
     DatePipe,
