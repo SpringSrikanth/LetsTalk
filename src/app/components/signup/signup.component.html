@@ -66,13 +66,17 @@
                     placeholder="Enter your hobbies">
             </div>
             <div class="mb-3 row">
+                <input type="checkbox" class="col-md-3" id="checkbox" formControlName="termsAndConditions"/>
+                <p class="label"> I agree to <a routerLink="">Terms & Conditions</a></p>
+            </div>
+            <div class="mb-3 row">
                 <button type="submit" class="btn btn-info" style="width: 150px;border-radius: 10px;font-weight: 400;"
-                    [disabled]="!this.signUpForm.valid">Signup</button>
+                    [disabled]="!(this.signUpForm.valid && this.signUpForm.value.termsAndConditions)">Signup</button>
                 <button type="reset" class="btn btn-warning"
                     style="width: 150px;border-radius: 10px;font-weight: 400;">Reset</button>
             </div>
             <div class="mb-3 row">
-                <h6 class="col-md-7">Already have an Account? <a routerLink="/signin">Signin</a></h6>
+                <h6 class="col-md-7" style="font-size: 14px;">Already have an Account? <a routerLink="/signin">Signin</a></h6>
             </div>
             <div class="mb-3 row">
                 <button type="button" class="btn btn-light google"><svg xmlns="http://www.w3.org/2000/svg" width="16"

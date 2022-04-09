@@ -4,7 +4,7 @@
     <mat-sidenav-content opened>
         <p (click)="close()" style="border-radius: 50%;border: solid lightgray;margin: 5px;float: right; height: 25px;width: 25px;padding-left: 5px;">x</p>
           <form action="" class="form pl-4 mt-4" [formGroup]="form">
-            <h3>User Details </h3>
+            <h1>User Details </h1>
             <div class="row mt-4">
               <label class="col-md-3" for="userId">User Id:</label>
               <input type="text" id="userId" formControlName="userId"class="col-md-6 form-control form-control-sm ">
@@ -40,7 +40,6 @@
                 <mat-radio-button class="ml-2" value="Female">Female</mat-radio-button>
                 <mat-radio-button class="ml-2" value="Others">Others</mat-radio-button>
               </mat-radio-group>
-              <input type="radio" id="gender" formControlName="gender"class="">
             </div>
             <div class="row mt-4">
               <label class="col-md-3" for="createdAt">Created At:</label>
