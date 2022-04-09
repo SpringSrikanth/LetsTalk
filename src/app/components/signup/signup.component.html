@@ -66,8 +66,8 @@
                     placeholder="Enter your hobbies">
             </div>
             <div class="mb-3 row">
-                <input type="checkbox" class="col-md-3" id="checkbox" formControlName="termsAndConditions"/>
-                <p class="label"> I agree to <a routerLink="">Terms & Conditions</a></p>
+                <input type="checkbox" id="checkbox" formControlName="termsAndConditions"/>
+                <p> I agree to <span style="text-decoration:underline;color:rgb(98, 98, 245)" (click)="openDialog()">Terms & Conditions</span></p>
             </div>
             <div class="mb-3 row">
                 <button type="submit" class="btn btn-info" style="width: 150px;border-radius: 10px;font-weight: 400;"

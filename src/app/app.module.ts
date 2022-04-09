@@ -29,11 +29,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { UserdetailsSideNavComponent } from './components/userdetails-side-nav/userdetails-side-nav.component';
 import { MatRadioModule} from '@angular/material/radio';
 import { MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule} from '@angular/material/dialog'
 import { ProfileComponent } from './components/profile/profile.component';
 import { DatePipe } from '@angular/common';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { AuditdetailsSidenavComponent } from './components/auditdetails-sidenav/auditdetails-sidenav.component';
+import { TermsandconditionsComponent } from './components/termsandconditions/termsandconditions.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { AuditdetailsSidenavComponent } from './components/auditdetails-sidenav/
     ProfileComponent,
     BlogListComponent,
     BlogDetailsComponent,
-    AuditdetailsSidenavComponent
+    AuditdetailsSidenavComponent,
+    TermsandconditionsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import { AuditdetailsSidenavComponent } from './components/auditdetails-sidenav/
     MatSidenavModule,
     MatSlideToggleModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [
     DatePipe,

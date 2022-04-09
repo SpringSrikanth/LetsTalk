@@ -48,12 +48,25 @@ input{
     margin: 2px;
 }
 
+input[type="checkbox"] {
+  float: right;
+  width: 55px;
+}
 
 h4 {
   font-family: "Akaya Telivigala", cursive;
   font-size: 50px;
   margin: 50px;
   color: rgb(34, 33, 33);
+}
+
+p, p>span {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 14px;
+}
+
+p>span:hover{
+  cursor: pointer;
 }
 
 
