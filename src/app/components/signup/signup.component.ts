@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/auth/authentication.service';
 
@@ -18,17 +18,18 @@ export class SignupComponent implements OnInit {
 
   onInitSignUpForm(){
     this.signUpForm=this.formBuilder.group({
-      firstName:[''],
-      middleName:[''],
-      secondName:[''],
-      gender:[''],
-      dob:[''],
-      mobile:[''],
-      email:[''],
-      userName:[''],
-      password:[''],
+      firstName:['',[Validators.required]],
+      middleName:['',],
+      secondName:['',[Validators.required]],
+      gender:['',[Validators.required]],
+      dob:['',[Validators.required]],
+      mobile:['',[Validators.required]],
+      email:['',[Validators.required]],
+      userName:['',[Validators.required]],
+      password:['',[Validators.required]],
       bio:[''],
-      hobbies:['']
+      hobbies:['',[Validators.required]],
+      termsAndConditions:[false,[Validators.required]]
     })
   }
 
