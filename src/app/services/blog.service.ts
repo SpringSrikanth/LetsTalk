@@ -12,7 +12,12 @@ export class BlogService {
   getPublicBlogs(){
     return this.http.get(`${environment.nodeUri}/public/blogs`)
   }
-  getPublicBlogsByPagination(pageIndex,pageSize){
-    return this.http.get(`${environment.nodeUri}/public/blogs/${pageIndex}/${pageSize}`)
+  getPublicBlogsByPagination(pageIndex,pageSize,published=true){
+    return this.http.get(`${environment.nodeUri}/public/blogs/${pageIndex}/${pageSize}/${published}`)
   }
+
+  getUserBlogsByPagination(pageIndex,pageSize,published=true){
+    return this.http.get(`${environment.nodeUri}/blogs/userId/${pageIndex}/${pageSize}/${published}`)
+  }
+
 }

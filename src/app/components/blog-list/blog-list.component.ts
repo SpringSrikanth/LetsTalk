@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
@@ -11,13 +11,15 @@ export class BlogListComponent implements OnInit {
   constructor(private api:BlogService) { }
 
   public allBlogs;
+  public pageIndex=0;
+  public pageSize=5;
 
   async ngOnInit(): Promise<void> {
-    await this.getAllBlogs();
+    await this.getAllBlogs(this.pageIndex,this.pageSize);
   }
 
-  public async getAllBlogs(){
-    const  result = await this.api.getPublicBlogs().toPromise();
+  public async getAllBlogs(pageIndex,pageSize){
+    const  result = await this.api.getPublicBlogsByPagination(pageIndex,pageSize).toPromise();
     console.log(result)
     this.allBlogs =result;
   }
