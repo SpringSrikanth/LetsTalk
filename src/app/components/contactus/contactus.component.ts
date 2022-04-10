@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthenticationService } from 'src/app/auth/authentication.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,18 +8,28 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contactus.component.scss']
 })
 export class ContactusComponent implements OnInit {
-  contactUsForm:any;
-  constructor(private formBuilder:FormBuilder) { }
-
+  contactUsForm:FormGroup;
+  constructor(private formBuilder:FormBuilder, private service:AuthenticationService) {
+    this.formInit();
+  }
+  
   ngOnInit(): void {
+  }
+  
+  formInit(){
+    const userData= this.service.userDetails ? JSON.parse(this.service.userDetails) :null
     this.contactUsForm=this.formBuilder.group({
-      name:["",[Validators.required]],
-      email:['',[Validators.required]],
+      name:[userData?.user?.firstName,[Validators.required]],
+      email:[userData?.user?.email,[Validators.required]],
       context:['',[Validators.required]],
       subject:['',[Validators.required]],
       message:['',[Validators.required]]
     })
+    this.contactUsForm.get('name').disable({emitEvent:false})
+    this.contactUsForm.get('email').disable({emitEvent:false})
+
   }
+  
   public getName(){
     return this.contactUsForm.get('name');
   }
@@ -34,6 +45,16 @@ export class ContactusComponent implements OnInit {
   public getMessage(){
     return this.contactUsForm.get('message');
   }
+
+  public get firstName(){
+    const auth = this.service.userDetails ? JSON.parse(this.service.userDetails) :null;
+    return auth?.user?.firstName;
+  }
+  public get email(){
+    const auth = this.service.userDetails ? JSON.parse(this.service.userDetails) :null;
+    return auth?.user?.email;
+  }
+
   onSubmitSignUpForm(){
     console.log(this.contactUsForm.value);
   }
