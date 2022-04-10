@@ -7,6 +7,7 @@ import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SettingsComponent } from './components/settings/settings.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UsersComponent } from './components/users/users.component';
@@ -67,7 +68,11 @@ const routes: Routes = [
   {
     path:'users',
     canActivate:[AuthguardGuard,AdminGuard],
-    component:UsersComponent
+    component:UsersComponent,
+  },
+  {
+    path:'settings',
+    component:SettingsComponent
   },
   {
     path:'forbidden',
