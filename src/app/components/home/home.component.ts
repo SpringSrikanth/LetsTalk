@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  blogInput= {
+    published:true,
+    url:'public'
+  }
   constructor(private router:Router) { }
 
   ngOnInit(): void {
