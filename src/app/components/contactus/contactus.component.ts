@@ -9,6 +9,8 @@ import { AuthenticationService } from 'src/app/auth/authentication.service';
 })
 export class ContactusComponent implements OnInit {
   contactUsForm:FormGroup;
+  firstName='';
+  email='';
   constructor(private formBuilder:FormBuilder, private service:AuthenticationService) {
     this.formInit();
   }
@@ -17,17 +19,18 @@ export class ContactusComponent implements OnInit {
   }
   
   formInit(){
-    const userData= this.service.userDetails ? JSON.parse(this.service.userDetails) :null
+    const userData= this.service.userDetails ? JSON.parse(this.service.userDetails) :null;
+    this.firstName=userData?.user?.firstName;
+    this.email=userData?.user?.email;
     this.contactUsForm=this.formBuilder.group({
-      name:[userData?.user?.firstName,[Validators.required]],
-      email:[userData?.user?.email,[Validators.required]],
+      name:[this.firstName,[Validators.required]],
+      email:[this.email,[Validators.required]],
       context:['',[Validators.required]],
       subject:['',[Validators.required]],
       message:['',[Validators.required]]
     })
-    this.contactUsForm.get('name').disable({emitEvent:false})
-    this.contactUsForm.get('email').disable({emitEvent:false})
-
+    this.contactUsForm.get('name').disable({emitEvent:false});
+    this.contactUsForm.get('email').disable({emitEvent:false});
   }
   
   public getName(){
@@ -46,16 +49,14 @@ export class ContactusComponent implements OnInit {
     return this.contactUsForm.get('message');
   }
 
-  public get firstName(){
-    const auth = this.service.userDetails ? JSON.parse(this.service.userDetails) :null;
-    return auth?.user?.firstName;
-  }
-  public get email(){
-    const auth = this.service.userDetails ? JSON.parse(this.service.userDetails) :null;
-    return auth?.user?.email;
-  }
 
   onSubmitSignUpForm(){
-    console.log(this.contactUsForm.value);
+    console.log(this.contactUsForm.getRawValue());
+  }
+
+  onReset(){
+    this.getContext().reset();
+    this.getSubject().reset();
+    this.getMessage().reset();
   }
 }

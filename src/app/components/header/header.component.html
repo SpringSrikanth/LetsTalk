@@ -1,6 +1,6 @@
 <nav class="main-navigation">
   <div class="navbar-header animated fadeInUp">
-    <a class="navbar-brand" href="#" style="font-size: 26px;">Let's Talk Club</a>
+    <a class="navbar-brand" href="#" style="font-size: 26px;">Let's Talk</a>
   </div>
   <ul class="nav-list">
     <li class="nav-list-item" *ngIf="isUserLoggedIn">
@@ -33,6 +33,14 @@
     </li>
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">About us</a>
+    </li>
+    <li class="nav-list-item" *ngIf="isUserLoggedIn">
+      <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">
+        <div class="coffee-icon coffee-icon-1">
+          <span class="coffee-top"></span>
+          <span class="coffee-body"></span>
+        </div>
+      </a>
     </li>
     <li class="nav-list-item dropdown" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
