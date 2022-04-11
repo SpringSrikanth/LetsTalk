@@ -38,6 +38,7 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
 import { AuditdetailsSidenavComponent } from './components/auditdetails-sidenav/auditdetails-sidenav.component';
 import { TermsandconditionsComponent } from './components/termsandconditions/termsandconditions.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { CreateblogComponent } from './components/createblog/createblog.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     BlogDetailsComponent,
     AuditdetailsSidenavComponent,
     TermsandconditionsComponent,
-    SettingsComponent
+    SettingsComponent,
+    CreateblogComponent
   ],
   imports: [
     BrowserModule,

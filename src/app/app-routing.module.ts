@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { AuditsComponent } from './components/audits/audits.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { CreateblogComponent } from './components/createblog/createblog.component';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -39,6 +40,11 @@ const routes: Routes = [
     path:'blogs',
     canActivate:[AuthguardGuard],
     component:BlogsComponent
+  },
+  {
+    path:'create-blog',
+    canActivate:[AuthguardGuard],
+    component:CreateblogComponent
   },
   {
     path:'audits',
