@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   // nodeUri:'http://localhost:3000'
-  nodeUri:'https://nodejscrudbysrikanth.herokuapp.com'
+  nodeUri:'https://letstalk-be.herokuapp.com'
+  // nodeUri:'https://nodejscrudbysrikanth.herokuapp.com'
 };
 
 /*
