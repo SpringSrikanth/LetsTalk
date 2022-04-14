@@ -75,3 +75,20 @@
   28% { transform: translateX( -700px ); }
   100% { transform: translateX( -700px ); }
 }
+
+
+@media screen and (max-width: 767px) {  
+  .card{
+    margin-left: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+ .card{
+    margin-left: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+  }
+}
