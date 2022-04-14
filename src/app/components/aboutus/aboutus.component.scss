@@ -139,3 +139,28 @@ $milk-coffee: #fff; //milk and cream color
   }
 }
 //buy me coffee ends
+.letstalk_contributors{
+  padding:10px;
+  margin-left: 90px;
+}
+
+.letstalk-about-title{
+  color:orangered;
+  font-size: 45px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {  
+  .letstalk_contributors{
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .letstalk_contributors{
+    margin: 0px;
+    margin-top: 50px;
+  }
+}

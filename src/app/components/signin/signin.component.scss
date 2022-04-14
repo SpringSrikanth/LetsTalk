@@ -2,7 +2,6 @@
   border: 1px cadetblue solid;
   border-radius: 8px;
   background-color: white;
-  padding: 40px;
   left:200px;
   top:90px;
 }
@@ -22,6 +21,10 @@
 h3 {
   font-family: sans-serif;
   font-size: 24px;
+}
+
+.row{
+  margin: 12px !important;
 }
 
 
@@ -45,4 +48,56 @@ h5 {
   margin-left: 20px;
   margin-top: 10px;
   border-color: rgb(8, 4, 194);
+}
+
+
+@media screen and (max-width: 767px) {  
+  .signinformbox{
+    top:30px;
+    left:10px;
+    margin:5px;
+    margin-top: 30px;
+    width: 95%;
+  }
+
+  .row{
+    margin: 0px !important;
+  }
+
+  .signin-title{
+    margin-left: 0px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  button{
+    margin-top: 10px;
+  }
+
+  .facebook{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .signinformbox{
+    top:30px;
+    left:0px;
+    margin:5px;
+    margin-bottom: 50px;
+  }
+
+  .signin-title{
+    margin: 0px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  button{
+    margin-top: 10px;
+  }
+
+  .facebook{
+    margin-bottom: 20px;
+  }
 }
