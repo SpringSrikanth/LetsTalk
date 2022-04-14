@@ -15,6 +15,16 @@
     mat-header-cell, mat-cell{
         min-width: 150px;
     }
+
+    mat-sidenav{
+        width: 80% !important;
+    }
+
+    mat-sidenav-content{
+        .container{
+            margin: 0px;
+        }
+    }
   }
 
   @media screen and (max-width: 468px) {
@@ -37,6 +47,15 @@
     }
     mat-header-cell, mat-cell{
         min-width: 150px;
+    }
+    mat-sidenav{
+        width: 80% !important;
+    }
+
+    mat-sidenav-content{
+        .container{
+            margin: 0px;
+        }
     }
   }
 html, body { height: 100%; }
