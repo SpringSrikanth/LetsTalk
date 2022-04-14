@@ -16,7 +16,7 @@
         flex-direction: column !important;
         margin: 0px !important;
     }
-    [class*="col-md-"] {
+    [class*="col-md-*"] {
         width: 100%;
         padding: 0px;
     }
