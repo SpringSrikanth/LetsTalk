@@ -80,17 +80,38 @@
 @media screen and (max-width: 767px) {  
   .card{
     margin-left: 0px !important;
-    margin: 5px !important;
-    padding: 5px;
+    margin: 0px !important;
     width: 100%;
+    height: 231px;
+  }
+
+  .card::after {
+    content: '';
+    width: 100%;
+    height: auto;
+  }
+  
+  .card_part {
+    width: 100%;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 468px) {
  .card{
     margin-left: 0px !important;
-    margin: 5px !important;
-    padding: 5px;
+    margin: 0px !important;
+    height: 231px;
+  }
+
+  .card::after {
+    content: '';
     width: 100%;
+    height: auto;
+  }
+  
+  .card_part {
+    width: 100%;
+    height: auto;
   }
 }
