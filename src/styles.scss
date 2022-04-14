@@ -8,6 +8,23 @@
     [class*="col-md-"] {
         width: 100%;
     }
+
+    mat-table{
+        overflow-x: auto;
+    }
+    mat-header-cell, mat-cell{
+        min-width: 150px;
+    }
+
+    mat-sidenav{
+        width: 80% !important;
+    }
+
+    mat-sidenav-content{
+        .container{
+            margin: 0px;
+        }
+    }
   }
 
   @media screen and (max-width: 468px) {
@@ -16,13 +33,29 @@
         flex-direction: column !important;
         margin: 0px !important;
     }
-    [class*="col-md-"] {
+    [class*="col-md-*"] {
         width: 100%;
         padding: 0px;
     }
     .card{
         margin-left: 0px;
         margin: 2px;
+    }
+
+    mat-table{
+        overflow-x: auto;
+    }
+    mat-header-cell, mat-cell{
+        min-width: 150px;
+    }
+    mat-sidenav{
+        width: 80% !important;
+    }
+
+    mat-sidenav-content{
+        .container{
+            margin: 0px;
+        }
     }
   }
 html, body { height: 100%; }
