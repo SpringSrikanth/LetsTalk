@@ -80,7 +80,8 @@
 @media screen and (max-width: 767px) {  
   .card{
     margin-left: 0px !important;
-    margin: 0px !important;
+    margin: 5px !important;
+    padding: 5px;
     width: 100%;
   }
 }
@@ -88,7 +89,8 @@
 @media screen and (max-width: 468px) {
  .card{
     margin-left: 0px !important;
-    margin: 0px !important;
+    margin: 5px !important;
+    padding: 5px;
     width: 100%;
   }
 }
