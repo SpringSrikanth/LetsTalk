@@ -8,6 +8,13 @@
     [class*="col-md-"] {
         width: 100%;
     }
+
+    mat-table{
+        overflow-x: auto;
+    }
+    mat-header-cell, mat-cell{
+        min-width: 150px;
+    }
   }
 
   @media screen and (max-width: 468px) {
@@ -23,6 +30,13 @@
     .card{
         margin-left: 0px;
         margin: 2px;
+    }
+
+    mat-table{
+        overflow-x: auto;
+    }
+    mat-header-cell, mat-cell{
+        min-width: 150px;
     }
   }
 html, body { height: 100%; }
