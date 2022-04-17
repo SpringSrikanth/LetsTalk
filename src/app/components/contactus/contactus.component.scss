@@ -1,13 +1,11 @@
-
 .signUpFormStyle{
     border: 1px #F4F6FC solid;
-    // background-color: #F4F6FC;
-    border-radius: 10px;
     margin: 10px 300px 10px 300px;
-    height: 445px;
+    height: auto;
     padding: 25px;
     font-weight: bold;
 }
+
 h2{
     text-align: center;
     margin-top: 25px;
@@ -16,45 +14,69 @@ h2{
     font-size: 48px;
     line-height: 64px;
 }
+
 p{
     text-align: center;
 }
 
-input{
-    font-weight: bold;
-    font-size: 15px;
-    // background-color: #F4F6FC;
-    font-family: "Akaya Telivigala", cursive;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    height: 50px;
+@media screen and (max-width: 767px) {  
+    .signUpFormStyle{
+        margin: 0px;
+        height: auto;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    h2{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: "Akaya Telivigala", cursive;
+        font-size: 24px;
+    }
+    textarea{
+        width: 94%;
+    }
+
+    label{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    button{
+        width: 150px;
+    }
+
+    .btn-class{
+        display: block;
+    }
 }
-textarea{
-    font-weight: bold;
-    font-size: 15px;
-    font-family: "Akaya Telivigala", cursive;
-    // background-color: #F4F6FC;
-    margin-top: 8px;
-    height: 100px;
-}
-.submitButton{
-    // background-color: orangered;
-    border-radius: 20px;
-    margin: 15px;
-    height: 40px;
-    width: 175px;
-    color: white;
-    // border-color: orangered;
-    font-size: 13.5px;
-}
-.resetButton{
-    // background-color: #F4F6FC;
-    border-radius: 20px;
-    // border-color: orangered;
-    margin: 15px;
-    height: 40px;
-    width: 175px;
-    // color: orangered;
-    font-size: 13.5px;
-    font-weight: bold;
+
+@media screen and (max-width: 468px) {
+    .signUpFormStyle{
+        margin: 0px;
+        height: auto;
+        padding: 10px;
+        font-weight: bold;
+    }
+    h2{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: "Akaya Telivigala", cursive;
+        font-size: 24px;
+    }
+    textarea{
+        width: 94%;
+    }
+    label{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    button{
+        width: 150px;
+    }
+    .btn-class{
+        display: block;
+    }
 }
