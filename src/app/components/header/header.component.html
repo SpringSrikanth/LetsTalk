@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#" style="font-size: 26px;">Let's Talk</a>
   </div>
   <ul class="small-device-menu nav-list">
-    <li class="nav-list-item" *ngIf="isUserLoggedIn">
+    <li class="nav-list-item" *ngIf="isUserLoggedIn" title="Buy Me Coffee !!!">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">
         <div class="coffee-icon coffee-icon-1">
           <span class="coffee-top"></span>
@@ -11,7 +11,8 @@
         </div>
       </a>
     </li>
-    <li class="nav-list-item dropdown" *ngIf="isUserLoggedIn">
+    <li class="nav-list-item dropdown" style="position: relative;
+    z-index: 200;" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
       <div class="dropdown-menu">
           <a routerLink="" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-inbox-fill" viewBox="0 0 17 19">
@@ -31,14 +32,14 @@
           </svg> Logout</a>
       </div>
     </li>
-    <li class="nav-list-item menu-icon-cls" *ngIf="!isMenuOpen"  (click)="isMenuOpen = !isMenuOpen">
+    <li class="nav-list-item menu-icon-cls" style="margin: 0px;" *ngIf="!isMenuOpen"  (click)="isMenuOpen = !isMenuOpen">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
     </li>
 
-    <li class="nav-list-item menu-icon-cls" *ngIf="isMenuOpen"  (click)="isMenuOpen = !isMenuOpen">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+    <li class="nav-list-item menu-icon-cls" style="margin: 0px;" *ngIf="isMenuOpen"  (click)="isMenuOpen = !isMenuOpen">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="color: orangered;" class="bi bi-x-lg" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
         <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
       </svg>
@@ -70,7 +71,7 @@
     <li class="nav-list-item" *ngIf="!isUserLoggedIn">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">About us</a>
     </li>
-    <li class="nav-list-item big-screen-menu" *ngIf="isUserLoggedIn">
+    <li class="nav-list-item big-screen-menu" *ngIf="isUserLoggedIn" title="Buy Me Coffee !!!">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">
         <div class="coffee-icon coffee-icon-1">
           <span class="coffee-top"></span>
@@ -78,7 +79,7 @@
         </div>
       </a>
     </li>
-    <li class="nav-list-item big-screen-menu" *ngIf="!isUserLoggedIn">
+    <li class="nav-list-item big-screen-menu" *ngIf="!isUserLoggedIn" title="Buy Me Coffee !!!">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">
         <div class="coffee-icon coffee-icon-1">
           <span class="coffee-top"></span>

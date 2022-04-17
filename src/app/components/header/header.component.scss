@@ -308,6 +308,13 @@ bottom: 15px;
   cursor: pointer;
 }
 
+.dropdown-toggle{
+  z-index: 200 !important;
+}
+
+.coffee-icon{
+  left: 50px;
+}
 }
 
 @media screen and (max-width: 468px) {
@@ -338,4 +345,11 @@ bottom: 15px;
     cursor: pointer;
   }
   
+  .dropdown-menu{
+    z-index: 200 !important;
+  }
+
+  .coffee-icon{
+    left: 50px;
+  }
 }
