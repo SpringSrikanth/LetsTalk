@@ -39,6 +39,7 @@ import { AuditdetailsSidenavComponent } from './components/auditdetails-sidenav/
 import { TermsandconditionsComponent } from './components/termsandconditions/termsandconditions.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { CreateblogComponent } from './components/createblog/createblog.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { CreateblogComponent } from './components/createblog/createblog.componen
     MatRadioModule,
     MatExpansionModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    PdfViewerModule
   ],
   providers: [
     DatePipe,

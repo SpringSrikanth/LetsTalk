@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#" style="font-size: 26px;">Let's Talk</a>
   </div>
   <ul class="small-device-menu nav-list">
-    <li class="nav-list-item" *ngIf="isUserLoggedIn" title="Buy Me Coffee !!!">
+    <li class="nav-list-item"  title="Buy Me Coffee !!!">
       <a class="nav-link" routerLink="/about-us" [routerLinkActive]="['active']">
         <div class="coffee-icon coffee-icon-1">
           <span class="coffee-top"></span>
@@ -12,7 +12,7 @@
       </a>
     </li>
     <li class="nav-list-item dropdown" style="position: relative;
-    z-index: 200;" *ngIf="isUserLoggedIn">
+    z-index: 200;margin: 0px;" *ngIf="isUserLoggedIn">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi! {{userName}} </a>
       <div class="dropdown-menu">
           <a routerLink="" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-inbox-fill" viewBox="0 0 17 19">

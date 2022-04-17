@@ -282,6 +282,7 @@ bottom: 15px;
 @media screen and (max-width: 767px) {  
   .main-navigation{
     display: block;
+    margin-top: 20px;
   }
  .big-screen-menu{
    display: none !important;
@@ -312,14 +313,17 @@ bottom: 15px;
   z-index: 200 !important;
 }
 
-.coffee-icon{
-  left: 50px;
+a.navbar-brand{
+  padding: 0px;
+  margin-left: 10px;
 }
+
 }
 
 @media screen and (max-width: 468px) {
   .main-navigation{
     display: block;
+    margin-top: 20px;
   }
   .big-screen-menu{
     display: none !important;
@@ -330,7 +334,7 @@ bottom: 15px;
   }
 
   .nav-list-small-screen{
-    display:flex;
+    display:block;
     flex-direction:column;
   }
 
@@ -349,7 +353,8 @@ bottom: 15px;
     z-index: 200 !important;
   }
 
-  .coffee-icon{
-    left: 50px;
+  a.navbar-brand{
+    padding: 0px;
+    margin-left: 10px;
   }
 }
