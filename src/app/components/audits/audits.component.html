@@ -1,5 +1,5 @@
 <div class="container-fluid" style="width:100%">
-    <mat-table class="table table-striped table-bordered" [dataSource]="auditData?.audits">
+    <mat-table class="table" [dataSource]="auditData?.audits">
         <ng-container matColumnDef="email">
             <mat-header-cell *matHeaderCellDef style="min-width:250px">Email</mat-header-cell>
             <mat-cell *matCellDef="let element" style="min-width:250px">{{element?.email}}</mat-cell>

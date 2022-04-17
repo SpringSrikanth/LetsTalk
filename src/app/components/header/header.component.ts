@@ -8,7 +8,8 @@ import { AuthenticationService } from 'src/app/auth/authentication.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public isAdmin="ADMIN"
+  public isAdmin="ADMIN";
+  public isMenuOpen=true;
 
   public get isUserLoggedIn(){
     return this.service.isUserLoggedIn || false;

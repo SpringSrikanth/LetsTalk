@@ -273,3 +273,69 @@ bottom: 15px;
   }
 }
 //buy me coffee ends
+
+
+.small-device-menu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {  
+  .main-navigation{
+    display: block;
+  }
+ .big-screen-menu{
+   display: none !important;
+ }
+
+ .small-device-menu {
+  display: block;
+}
+
+.nav-list-small-screen{
+  display:block;
+  flex-direction:column;
+}
+
+.nav-list-small-screen{
+  .nav-list-item{
+    width: 100%;
+    float: left;
+    text-align: left;
+  }
+}
+
+.menu-icon-cls{
+  cursor: pointer;
+}
+
+}
+
+@media screen and (max-width: 468px) {
+  .main-navigation{
+    display: block;
+  }
+  .big-screen-menu{
+    display: none !important;
+  }
+
+  .small-device-menu {
+    display: block;
+  }
+
+  .nav-list-small-screen{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .nav-list-small-screen{
+    .nav-list-item{
+      width: 100%;
+      float: left;
+      text-align: left;
+    }
+  }
+  .menu-icon-cls{
+    cursor: pointer;
+  }
+  
+}
